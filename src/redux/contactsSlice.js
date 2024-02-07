@@ -39,10 +39,11 @@ const contactsSlice = createSlice({
             .addCase(addContact.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.error = null;
+                console.log(action.payload)
                 state.contacts.push({
                     id: action.payload.id,
                     name: action.payload.name,
-                    phone: action.payload.phone,
+                    number: action.payload.number,
                 });
             })
             .addCase(addContact.rejected, handleRejected)

@@ -1,7 +1,7 @@
-const HomePage = () => {
-  return (
-    <h1>PhoneBook welcome page!</h1>
-  )
-}
+import { Title } from 'components/SharedLayout/SharedLayout.styled';
 
-export default HomePage
+const HomePage = () => {
+    return <Title>PhoneBook welcome page!</Title>;
+};
+
+export default HomePage;

@@ -11,8 +11,8 @@ const ContactsList = () => {
         <>
             {filteredContacts?.length > 0 ? (
                 <ContactsListStyled>
-                    {filteredContacts.map(({ id, name, phone }) => (
-                        <ContactsItem key={id} id={id} name={name} phone={phone} type="button" />
+                    {filteredContacts.map(({ id, name, number }) => (
+                        <ContactsItem key={id} id={id} name={name} number={number} type="button" />
                     ))}
                 </ContactsListStyled>
             ) : (

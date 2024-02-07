@@ -4,14 +4,14 @@ import { Form, FormButton, FormInput, FormLabel } from './ContactsForm.styled';
 
 const initialValues = {
     name: '',
-    phone: '',
+    number: '',
 };
 
 const ContactsForm = ({ onSubmit }) => {
     const [form, setForm] = useState({ ...initialValues });
 
     const nameId = useMemo(() => nanoid(), []);
-    const phoneId = useMemo(() => nanoid(), []);
+    const numberId = useMemo(() => nanoid(), []);
 
     const handleChange = event => {
         const { name, value } = event.currentTarget;
@@ -42,13 +42,13 @@ const ContactsForm = ({ onSubmit }) => {
                     required
                 />
             </FormLabel>
-            <FormLabel htmlFor={phoneId}>
+            <FormLabel htmlFor={numberId}>
                 Number
                 <FormInput
                     type="tel"
-                    id={phoneId}
-                    name="phone"
-                    value={form.phone}
+                    id={numberId}
+                    name="number"
+                    value={form.number}
                     onChange={handleChange}
                     required
                 />

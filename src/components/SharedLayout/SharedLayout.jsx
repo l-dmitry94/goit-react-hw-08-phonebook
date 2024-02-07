@@ -3,22 +3,27 @@ import Navigation from 'components/Navigation';
 import UserMenu from 'components/UserMenu';
 import { useAuth } from 'hooks';
 import { Outlet } from 'react-router-dom';
+import { Container, Header, Wrapper } from './SharedLayout.styled';
 
 const SharedLayout = () => {
-    const {isLoggedIn} = useAuth()
+    const { isLoggedIn } = useAuth();
 
     return (
         <>
-            <header>
-                <div className="container">
-                    <Navigation />
+            <Header>
+                <Container>
+                    <Wrapper>
+                        <Navigation />
 
-                    {isLoggedIn ? <UserMenu/> : <AuthNav />}
-                </div>
-            </header>
+                        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+                    </Wrapper>
+                </Container>
+            </Header>
 
             <main>
-                <Outlet />
+                <Container>
+                    <Outlet />
+                </Container>
             </main>
         </>
     );

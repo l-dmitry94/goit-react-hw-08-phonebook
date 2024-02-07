@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
+import { List, ListItem, ListLink } from "components/Navigation/Navigation.styled";
 
 const AuthNav = () => {
     return (
-        <ul>
-            <li>
-                <Link to="/register">Register</Link>
-            </li>
-            <li>
-                <Link to="/login">Login</Link>
-            </li>
-        </ul>
+        <List>
+            <ListItem>
+                <ListLink to="/register">Register</ListLink>
+            </ListItem>
+            <ListItem>
+                <ListLink to="/login">Login</ListLink>
+            </ListItem>
+        </List>
     );
 };
 

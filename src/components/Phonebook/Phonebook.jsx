@@ -23,7 +23,7 @@ const Phonebook = () => {
     }, [dispatch]);
 
     const handleSubmit = newContact => {
-        const { name, phone } = newContact;
+        const { name, number } = newContact;
 
         const inContacts = contacts.find(
             contact => contact.name.toLowerCase() === name.toLowerCase()
@@ -33,7 +33,7 @@ const Phonebook = () => {
             return alert(`${inContacts.name} is already in contacts`);
         }
         const id = nanoid();
-        dispatch(addContact({ id, name, phone }));
+        dispatch(addContact({ id, name, number }));
     };
 
     const handleFilterChange = event => {
